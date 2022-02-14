@@ -1,0 +1,76 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    place-items: center;
+
+    background: #292C35;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: background-color .3s;
+}
+
+.light {
+    background: #F1F1F1;
+}
+
+.bttn {
+    display: inline-flex;
+    gap: 20px;
+    padding:5px;
+    border: none;
+    border-radius: 50px;
+    background-color: #111;
+    box-shadow: 2px 3px 2px 0px rgba(0, 0, 0, .5);
+
+    cursor: pointer;
+    
+    will-change: transform box-shadow;
+    transition: box-shadow .3s, transform .3s;
+    transform: scale(1);
+
+    position:relative;
+}
+
+.bttn:active {
+    background: #222;
+    box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, .7);
+
+    transform: scale(.9);
+}
+
+img {
+    height:20px;
+    aspect-ratio: 1;
+    user-select: none;
+}
+
+input {
+    display:none;
+}
+
+.bolinha {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+
+    aspect-ratio: 1;
+    border-radius: 100%;
+    
+    background-color: white;
+
+    transform: translateX(0px);
+    transition: transform .3s ease-in-out;
+    will-change: transform;
+}
+
+input:checked ~ .bolinha {
+    transform: translateX(40px);
+}
