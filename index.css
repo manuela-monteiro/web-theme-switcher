@@ -55,7 +55,7 @@ input {
     display:none;
 }
 
-.bolinha {
+.circle-indicator {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -71,6 +71,6 @@ input {
     will-change: transform;
 }
 
-input:checked ~ .bolinha {
+input:checked ~ .circle-indicator {
     transform: translateX(40px);
 }
